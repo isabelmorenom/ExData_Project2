@@ -7,7 +7,7 @@ output: html_document
 
 ##Introduction
 
-Fine particulate matter (PM2.5) is an ambient air pollutant for which there is strong evidence that it is harmful to human health. In the United States, the Environmental Protection Agency (EPA) is tasked with setting national ambient air quality standards for fine PM and for tracking the emissions of this pollutant into the atmosphere. Approximatly every 3 years, the EPA releases its database on emissions of PM2.5. This database is known as the National Emissions Inventory (NEI). You can read more information about the NEI at the EPA National Emissions Inventory web site.
+Fine particulate matter (PM2.5) is an ambient air pollutant for which there is strong evidence that it is harmful to human health. In the United States, the Environmental Protection Agency (EPA) is tasked with setting national ambient air quality standards for fine PM and for tracking the emissions of this pollutant into the atmosphere. Approximatly every 3 years, the EPA releases its database on emissions of PM2.5. This database is known as the National Emissions Inventory (NEI). You can read more information about [the NEI at the EPA National Emissions Inventory web site](https://www3.epa.gov/ttn/chief/eiinformation.html).
 
 For each year and for each type of PM source, the NEI records how many tons of PM2.5 were emitted from that source over the course of the entire year. The data that you will use for this assignment are for 1999, 2002, 2005, and 2008.
 
@@ -67,25 +67,59 @@ You must address the following questions and tasks in your exploratory analysis.
 
 1. Have total emissions from PM2.5 decreased in the United States from 1999 to 2008? Using the base plotting system, make a plot showing the total PM2.5 emission from all sources for each of the years 1999, 2002, 2005, and 2008.
 
-[plot1.png]()
+* [plot1.png](https://github.com/isabelmorenom/ExData_Project2/blob/master/plot1.png)
 
+* We can see in plot1.png that the total emissions decreased in the US  from 1999 to 2008. From 7,332,967 tons in 1999 to 3,464,206 tons in 2008.
 
 2. Have total emissions from PM2.5 decreased in the Baltimore City, Maryland (fips == "24510") from 1999 to 2008? Use the base plotting system to make a plot answering this question.
 
+* [plot2.png](https://github.com/isabelmorenom/ExData_Project2/blob/master/plot2.png)
+
+* As we can see in plot2.png, the PM2.5 decreased, but in 2005
+increased over the 2002 year. Data of total emissions (tons):
+
+    | 1999  |   2002  |   2005   |  2008  |
+    | ----- | ------- | -------- | ------ |
+    | 3274.180 | 2453.916 | 3091.354 | 1862.282 | 
 
 3. Of the four types of sources indicated by the type (point, nonpoint, onroad, nonroad) variable, which of these four sources have seen decreases in emissions from 1999-2008 for Baltimore City? Which have seen increases in emissions from 1999-2008? Use the ggplot2 plotting system to make a plot answer this question.
 
+* [plot3.png](https://github.com/isabelmorenom/ExData_Project2/blob/master/plot3.png)
+
+* As we can see in plot3.png, all types of pollution sources decreased except type  "POINT" FROM 297 tons of PM2.5 in 1999
+to 345 tons in 2008, with a large increase in 2005 (1202 tons)
+The main pollution source in Baltimore City is "NONPOINT" type.
 
 
 4. Across the United States, how have emissions from coal combustion-related sources changed from 1999-2008?
 
+* [plot4.png](https://github.com/isabelmorenom/ExData_Project2/blob/master/plot4.png)
 
+* As we can see in plot4.png, all types of pollution sources (POINT and NONPOINT) decreased from 1999 to 2008. In 2002  and 2005, the emissions by NONPOINT sources were the same (65034 tons) and by POINT increased from 481755 tons (2002) to 487847 tons (2005). The main pollution source is "POINT"  for the emissions from coal combustion.
 
 5. How have emissions from motor vehicle sources changed from 1999-2008 in Baltimore City?
 
+* [plot5.png](https://github.com/isabelmorenom/ExData_Project2/blob/master/plot5.png)
+
+* As we can see in plot5.png,the emissions from motor vehicle sources decreased. From 1999 to 2002, the emissions of PM2.5 decreased to media of 10 years.
+
+* summary(Total)
+
+    |Min.| 1st Qu. |  Median  |  Mean |3rd Qu.  |  Max. |
+    |----|---------|----------|-------|---------|-------|
+    |88.28  |119.90 | 132.40  |175.00 | 187.40  |346.80 |
+
+* The values of emissions (tons) per year:
+
+    |  1999   |   2002  |    2005   |   2008 |
+    |---------|---------|-----------|--------|
+   |346.82000 |134.30882| 130.43038 | 88.27546|
 
 6. Compare emissions from motor vehicle sources in Baltimore City with emissions from motor vehicle sources in Los Angeles County, California (fips == "06037"). Which city has seen greater changes over time in motor vehicle emissions?
 
+* [plot6.png](https://github.com/isabelmorenom/ExData_Project2/blob/master/plot6.png)
+
+* As we can see in plot6.png, Baltimore reduced the PM2.5 emissions in 258 tons. However, Los Angeles increased in 170 tons in the same period. In 2008 the difference between Los Angeles and Baltimore is 4013 tons in PM2.5 emissions from motor vehicle.
 
 ##Making and Submitting  
 
